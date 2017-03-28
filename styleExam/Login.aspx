@@ -2,27 +2,28 @@
 
 <!DOCTYPE html>
 <html >
-<head>
+<head >
   <meta charset="UTF-8">
   
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/style.css" >
 
   
 </head>
 
 <body>
   
-<form runat="server">
-  <header>Login</header>
-  <label>Username <span>*</span></label>
-  <asp:TextBox ID="TxtKullanici" runat="server"></asp:TextBox>
-    <label>Password <span>*</span></label>
-  <asp:TextBox ID="TxtSifre" runat="server" TextMode="Password"></asp:TextBox>
+<form runat="server" >
+  <header>Kırtasiye Giriş Ekranı</header>
+    <label>Kullanıcı Adı </label>
+  &nbsp;<asp:TextBox ID="TxtKullanici" runat="server" ></asp:TextBox>
+    <label>Şifre</label>
+  <asp:TextBox ID="TxtSifre" runat="server" TextMode="Password" ></asp:TextBox>
     <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   
-    <asp:Button ID="BtnLogin" runat="server" Text="Login" OnClick="BtnLogin_Click" Height="33px" Width="293px" />
     <br />
+  
+    <asp:Button ID="BtnLogin" runat="server" Text="Giriş" OnClick="BtnLogin_Click" Height="31px" Width="293px" />
 </form>
   
   

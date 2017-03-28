@@ -1,0 +1,36 @@
+﻿﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Toptanci.master.cs" Inherits="Toptanci" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="Script/jquery-1.12.0.min.js"></script>
+    <script src="Script/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" >
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">KIRTASİYE SANAL MAĞAZA</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="SiparisSorgula1.aspx">Bekleyen Siparişler</a></li>
+      <li><a href="FaturaSorgula1.html">Kesilen Faturalar</a></li>
+      <li role="button"><a href="Login.aspx">Çıkış</a></li>
+    </ul>
+     
+    </div>
+    </nav>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
