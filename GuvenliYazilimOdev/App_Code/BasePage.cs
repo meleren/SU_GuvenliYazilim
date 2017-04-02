@@ -15,7 +15,7 @@ public class BasePage : System.Web.UI.Page
     {
         if (Session["User_Kod"] != null)
         {
-            if (Convert.ToDateTime(Session["User_GirisZamani"].ToString()).AddMinutes(1) < System.DateTime.Now)
+            if (Convert.ToDateTime(Session["User_GirisZamani"].ToString()).AddMinutes(5) < System.DateTime.Now)
                 Session["User_Kod"] = null;
         }
     }

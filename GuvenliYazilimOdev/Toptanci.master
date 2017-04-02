@@ -21,7 +21,8 @@
       <a class="navbar-brand" href="#">KIRTASİYE SANAL MAĞAZA</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="SiparisSorgula1.aspx">Bekleyen Siparişler</a></li>
+      <li> <a href="UrunSorgula.aspx">Ürün Listesi</a></li>
+      <li><a href="SiparisSorgula1.aspx">Bekleyen Siparişler</a></li>
       <li><a href="FaturaSorgula1.aspx">Kesilen Faturalar</a></li>
       <li role="button" ><a href="Login.aspx">Çıkış</a></li>
     </ul>

@@ -29,7 +29,7 @@ public class BasePageToptanci : BasePage
             Response.End();
         }
     }
-    protected override void InitializeCulture()//Language Choose Method
+    protected override void InitializeCulture()
     {
         GirisKontrol();
 

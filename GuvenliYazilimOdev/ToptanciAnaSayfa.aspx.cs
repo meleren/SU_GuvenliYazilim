@@ -6,9 +6,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 //Güvensiz olan
-public partial class ToptanciAnaSayfa : System.Web.UI.Page
+//public partial class ToptanciAnaSayfa : System.Web.UI.Page
 //Güvenli olan
-//public partial class ToptanciAnaSayfa : BasePageToptanci
+public partial class ToptanciAnaSayfa : BasePageToptanci
 {
     protected void Page_Load(object sender, EventArgs e)
     {
