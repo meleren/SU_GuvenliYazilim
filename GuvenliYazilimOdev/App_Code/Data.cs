@@ -7,8 +7,14 @@ using System.Web;
 
 public class Data
 {
-    [DataContract]
     public class Urunler
+    {
+        [DataMember]
+        public IList<Urun> Liste { get; set; }
+    }
+
+    [DataContract]
+    public class Urun
     {
         [DataMember]
         public int Id { get; set; }
@@ -25,6 +31,24 @@ public class Data
 
         [DataMember]
         public string Marka { get; set; }
+
+    }
+    [DataContract]
+    public class Urunxx
+    {
+        [DataMember]
+        public int Id { get; set; }
+
+
+        [DataMember]
+        public string Tanim { get; set; }
+
+        [DataMember]
+        public string Birim { get; set; }
+
+        [DataMember]
+        public double BirimFiyat { get; set; }
+
 
     }
 
