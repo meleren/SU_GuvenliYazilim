@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <div id="home" data-role="view" data-title="aaaaaaaaaaaa" data-layout="default">
+        <ul data-role="listview" data-style="inset" data-type="group">
+            <li>
+                Africa
+                <ul id="veriekle">
+                    <li data-icon="toprated"><a>Nairobi</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+    <script>
+
+        //$(document).ready(function () {
+
+
+        //    $.ajax({
+        //        url: 'http://localhost:94/Service1.svc/GetAll',
+        //        contentType: "application/json; charset=utf-8",
+        //        data: "{ }",
+        //        dataType: 'json',
+        //        crossDomain: true,
+        //        processData: true,
+        //        type: 'POST',
+        //        //async: true,
+        //        success: function (data) {
+        //            $($.parseJSON(data.d)).each(function (index, value) {
+        //                alert('mesaj: ' + value.Tanim);
+        //               // $("#TableID").append("<tr><td>" + value.Name + "</td><td>" + value.LastName + "</td><td>" + value.Email + "</td></tr>");
+        //            });
+        //        },
+        //        error: function (e) {
+        //            alert('Error121212: ' );
+        //        }
+        //    });
+        //});
+
+        jQuery(document).on("click", "#veriekle", function () {
+
+            jQuery.ajax('Service1.svc/GetAll', {
+                type: 'GET',
+
+            }).then(function (data) {
+                console.log(data);
+                var obj = JSON.parse(data, function (key, value) {
+
+                    var wrapperDiv = $('<li/>', {
+                        "class": "wrapper"
+                    });
+                    wrapperDiv
+                        .append(key + " " + value);
+                    $("#veriekle").append(wrapperDiv);
+
+                });
+
+                //for (var key in data) {
+
+                //    //var title = $(" ", {
+                //    //    text: data[key].Id
+                //    //});
+
+                //    //var bosluk = $("<br />", {
+
+                //    //});
+
+                //    var wrapperDiv = $('<li/>', {
+                //        "class": "wrapper"
+                //    });
+                //    wrapperDiv
+                //        .append(data[key] + " Adet TL");
+                //    $("#veriekle").append(wrapperDiv);
+
+
+                //}
+
+
+
+
+
+            });
+
+            /* will return
+            {
+              id: 101,
+              title: 'foo',
+              body: 'bar',
+              userId: 1
+            }
+            */
+
+
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

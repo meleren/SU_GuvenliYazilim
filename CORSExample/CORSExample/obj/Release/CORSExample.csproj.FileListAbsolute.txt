@@ -1,0 +1,6 @@
+c:\users\mel\documents\visual studio 2013\Projects\CORSExample\CORSExample\bin\CORSExample.dll.config
+c:\users\mel\documents\visual studio 2013\Projects\CORSExample\CORSExample\bin\CORSExample.dll
+c:\users\mel\documents\visual studio 2013\Projects\CORSExample\CORSExample\bin\CORSExample.pdb
+c:\users\mel\documents\visual studio 2013\Projects\CORSExample\CORSExample\obj\Release\CORSExample.dll
+c:\users\mel\documents\visual studio 2013\Projects\CORSExample\CORSExample\obj\Release\CORSExample.pdb
+C:\Users\mel\Documents\Visual Studio 2013\Projects\CORSExample\CORSExample\obj\Release\CORSExample.csprojResolveAssemblyReference.cache

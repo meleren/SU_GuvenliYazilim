@@ -1,0 +1,12 @@
+c:\users\mel\documents\visual studio 2013\Projects\CORSExample\CORSExample\bin\CORSExample.dll.config
+c:\users\mel\documents\visual studio 2013\Projects\CORSExample\CORSExample\bin\CORSExample.dll
+c:\users\mel\documents\visual studio 2013\Projects\CORSExample\CORSExample\bin\CORSExample.pdb
+c:\users\mel\documents\visual studio 2013\Projects\CORSExample\CORSExample\obj\Debug\CORSExample.csprojResolveAssemblyReference.cache
+c:\users\mel\documents\visual studio 2013\Projects\CORSExample\CORSExample\obj\Debug\CORSExample.dll
+c:\users\mel\documents\visual studio 2013\Projects\CORSExample\CORSExample\obj\Debug\CORSExample.pdb
+F:\YuksekLisans\CORSExample\CORSExample\obj\Debug\CORSExample.csprojResolveAssemblyReference.cache
+F:\YuksekLisans\CORSExample\CORSExample\obj\Debug\CORSExample.dll
+F:\YuksekLisans\CORSExample\CORSExample\obj\Debug\CORSExample.pdb
+F:\YuksekLisans\CORSExample\CORSExample\bin\CORSExample.dll.config
+F:\YuksekLisans\CORSExample\CORSExample\bin\CORSExample.dll
+F:\YuksekLisans\CORSExample\CORSExample\bin\CORSExample.pdb
