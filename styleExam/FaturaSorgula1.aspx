@@ -1,21 +1,32 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Toptanci.master" AutoEventWireup="true" CodeFile="SiparisSorgula1.aspx.cs" Inherits="SiparisSorgula1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Toptanci.master" AutoEventWireup="true" CodeFile="FaturaSorgula1.aspx.cs" Inherits="FaturaSorgula1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
     <div class="container">
-        <h2>Fatura Kesilecek Siparişler</h2>
            <div class="form-group">
-                <div class="col-sm-10">
+                <div class="col-sm-1 ">
+                       Bayi Adı
+                </div>
+                 <div class="col-sm-2">
+                       <input class="form-control" id="bayiadi" type="text"/>
+                </div>
+                 <div class="col-sm-2">
+                      <button type="button" id="Sorgula" class=" btn btn-lg" style="width: 100%;"> Sorgula</button>
+                </div>
+            </div>
+         <h3>Fatura Listesi</h3>
+           <div class="form-group">
+               <div class="col-sm-10">
                    
 
                         <table class="table" id="table1">
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>SiparisNo</th>
-                                    <th>BayiAdi</th>
+                                    <th>Fatura No</th>
+                                    <th>Tarih</th>
+                                    <th>Bayi Adı</th>
                                     <th>Tutar (TL)</th>
                                 </tr>
                             </thead>
@@ -29,11 +40,22 @@
     </div>
 
     <script>
+        
+         function BayiAdiAl() {
+            
+             var Sonuc = document.getElementById("bayiadi");
+             console.log("x"+Sonuc.value+"x");
+            return (Sonuc.value)
+         }
         $(document).ready(function () {
+            $('#Sorgula').click(function () {
+                var id = BayiAdiAl();
+               
+                console.log(id);
             $.ajax({
-                url: 'SiparisSorgula1.aspx/GetAll',
+                url: 'FaturaSorgula1.aspx/FaturaGetir',
                 contentType: "application/json; charset=utf-8",
-                data: "{ }",
+                data: '{ BayiAdi: "' + id + '"}',
                 dataType: 'json',
                 async: true,
                 cache: false,
@@ -46,11 +68,13 @@
                     console.log(response.d);
                     var str = "";
                     var obj = JSON.parse(response.d, function (key, value) {
-                        if (key == "SiparisNo") {
+                        if (key == "FaturaNo") {
                             // var bas = "<tr><td align='center'><button type='button' class='btn' id='btnxx" + value + "' >Fatura Kes</button> </td>";
-                            var bas = "<tr><td><p data-placement='top' data-toggle='tooltip' title='Edit'> <a href='SiparisDetay.aspx?Id=" + value + "' class='ui-shadow ui-btn ui-corner-all ui-btn-inline' data-close-btn='right'>Sipariş Detayı</a></p></td>";
+                            var bas = "<tr><td><p data-placement='top' data-toggle='tooltip' title='Edit'> <a href='FaturaDetay.aspx?Id=" + value + "' class='ui-shadow ui-btn ui-corner-all ui-btn-inline' data-close-btn='right'>Fatura Detayı</a></p></td>";
                             str = str + bas + "<td> " + value + " </td>";
                         }
+                        if (key == "Tarih")
+                            str = str + "<td> " + value + " </td>";
                         if (key == "BayiAdi")
                             str = str + "<td> " + value + " </td>";
                         if (key == "Tutar")
@@ -62,10 +86,7 @@
                     alert('Hata: ');
                 }
             });
+            });
         });
     </script>
-
-
-
-
 </asp:Content>

@@ -11,44 +11,12 @@ public partial class Login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-         if (Session["User_Id"] != null)
-        {
-            Session["User_Id"] = null;
-        
-        }
-        else
-        {
-            if (!IsPostBack)
-            {
-                HttpCookie LoginCookie = Request.Cookies["SecureOdev_Login"];
-                if (LoginCookie != null)
-                {
-                    TxtKullanici.Text = LoginCookie["User"];
-                }
-            }
-            if (TxtKullanici.Text == "")
-                TxtKullanici.Focus();
-            else
-                TxtSifre.Focus();
-        }
+        Session["User_Kod"] = null;
     }
-    protected void SayfaCagir()
-    {
-        if (Session["User_Id"] == null)
-        {
-            if (Session["User_Yetkixxx"].ToString() == "1")
-            {
-                Response.Redirect("~/BayiAnaSayfa.aspx");
-            }
-            else if (Session["User_Yetkixxx"].ToString() == "2")
-            {
-                Response.Redirect("~/ToptanciAnaSayfa.aspx");
-            }
-        }
-    }
+
     protected void BtnLogin_Click(object sender, EventArgs e)
     {
-        if (Session["User_Id"] == null)
+        if (Session["User_Kod"] == null)
         {
             if (SifreKontrol() == false)
             {
@@ -69,12 +37,23 @@ public partial class Login : System.Web.UI.Page
     public bool SifreKontrol()
     {
         SqlConnection conn = DB.Connect();
+        //güvenli giriş 
 
-        string query = " select KulAdi,Tanim,Yetki from Kullanici where KulAdi= @KulAdi and Sifre= @Sifre";
+        string query = " select KulAdi,KulAdi Tanim,Yetki,BayiId from Kullanici where KulAdi= @KulAdi and Sifre= @Sifre";
 
         SqlCommand cmd = new SqlCommand(query, conn);
         cmd.Parameters.Add("@KulAdi", SqlDbType.VarChar, 20).Value = TxtKullanici.Text;
         cmd.Parameters.Add("@Sifre", SqlDbType.VarChar, 30).Value = TxtSifre.Text; //Sifre.TripleDesc(TbxSifre.Text);
+
+        /*
+        //güvensiz giriş için
+        string query = " select KulAdi,Tanim,Yetki from Kullanici where KulAdi= '" + TxtKullanici.Text + "' and Sifre= '" + TxtSifre.Text + "'"; 
+        // güvensiz Kullanıcı: ' or 1=1--
+         
+        SqlCommand cmd = new SqlCommand(query, conn);
+               
+         */
+
 
 
         SqlDataReader dr = cmd.ExecuteReader();
@@ -90,7 +69,9 @@ public partial class Login : System.Web.UI.Page
 
             Session["User_Kod"] = dr["KulAdi"].ToString();
             Session["User_Name"] = dr["Tanim"].ToString();
-            Session["User_Yetkixxx"] = dr["Yetki"].ToString();
+            Session["User_BayiId"] = dr["BayiId"].ToString();
+            Session["User_Yetki"] = dr["Yetki"].ToString();
+            Session["User_GirisZamani"] = System.DateTime.Now.ToString();
             Session["User_IP"] = HttpContext.Current.Request.UserHostAddress;
 
             dr.Close();
@@ -104,4 +85,21 @@ public partial class Login : System.Web.UI.Page
         cmd.Dispose();
         return false;
     }
+    protected void SayfaCagir()
+    {
+        if (Session["User_Kod"] != null)
+        {
+            // Message.ShowMessage(this, "deneme");
+            // Message.ShowMessage(this, Session["User_Yetkixxx"].ToString());
+
+            if (Session["User_Yetki"].ToString() == "1")
+            {
+                Response.Redirect("~/BayiAnaSayfa1.aspx");
+            }
+            else if (Session["User_Yetki"].ToString() == "2")
+            {
+                Response.Redirect("~/ToptanciAnaSayfa1.aspx");
+            }
+        }
     }
+}

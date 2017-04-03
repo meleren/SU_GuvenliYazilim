@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Toptanci.master.cs" Inherits="Toptanci" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Bayi.master.cs" Inherits="Bayi" %>
 
 <!DOCTYPE html>
 
@@ -21,9 +21,8 @@
       <a class="navbar-brand" href="#">KIRTASİYE SANAL MAĞAZA</a>
     </div>
     <ul class="nav navbar-nav">
-      <li> <a href="UrunSorgula.aspx">Ürün Listesi</a></li>
-      <li><a href="SiparisSorgula1.aspx">Bekleyen Siparişler</a></li>
-      <li><a href="FaturaSorgula1.aspx">Kesilen Faturalar</a></li>
+      <li> <a href="UrunSorgula1.aspx">Ürün Listesi</a></li>
+      <li><a href="SiparisEkle1.aspx">Sipariş Ekle</a></li>
       <li role="button" ><a href="Login.aspx">Çıkış</a></li>
     </ul>
      

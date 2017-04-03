@@ -5,10 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-//Güvensiz olan
-//public partial class ToptanciAnaSayfa : System.Web.UI.Page
-//Güvenli olan
-public partial class ToptanciAnaSayfa : BasePageToptanci
+public partial class SiparisDetay : BasePageToptanci
+//public partial class SiparisDetay : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
