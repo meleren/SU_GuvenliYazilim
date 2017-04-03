@@ -1,0 +1,16 @@
+   UYGULAMAMIZ ÝÇÝN ÝHTÝYAÇ LÝSTESÝ
+
+Bayi veya toptancýnýn girebilmesi için bir login sayfasý þu bileþenlerden oluþur:
+1)Kullanýcý adýnýn ve þifrenin yazýlabilmesi için 2 adet textbox
+2)Giriþ yapabilmek için 1 adet buton
+
+Bayi sayfasý için gerekli bileþenler:
+1)Ürün listesi adýnda 1 adet link
+2)Sipariþ ekle adýnda 1 adet link
+
+Toptancý sayfasý için gerekli bileþenler:
+1)Ürünleri listelemek için ürünler listesi adýnda 1 adet link
+2)Kesilen faturalarý görebilmek için 1 adet link
+3)Bekleyen sipariþleri görebilmek için 1 adet link
+
+Ýstemci ile sunucunun haberleþebilmesi için bir web servis
