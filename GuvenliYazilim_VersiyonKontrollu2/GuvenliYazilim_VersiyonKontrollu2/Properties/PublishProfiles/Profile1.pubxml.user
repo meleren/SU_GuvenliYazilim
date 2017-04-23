@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\GuvenliYazilim</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Bayi.Master">
+      <publishTime>04/21/2017 21:34:15</publishTime>
+    </File>
+    <File Include="BayiAnaSayfa1.aspx">
+      <publishTime>04/22/2017 09:05:01</publishTime>
+    </File>
+    <File Include="bin/GuvenliYazilim_VersiyonKontrollu2.dll">
+      <publishTime>04/22/2017 09:48:42</publishTime>
+    </File>
+    <File Include="css/all.min.css">
+      <publishTime>04/03/2017 03:07:18</publishTime>
+    </File>
+    <File Include="css/bootstrap.css">
+      <publishTime>04/03/2017 03:07:18</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>04/03/2017 03:07:18</publishTime>
+    </File>
+    <File Include="css/jquery.mobile-1.4.2.min.css">
+      <publishTime>04/03/2017 03:07:18</publishTime>
+    </File>
+    <File Include="css/style.css">
+      <publishTime>04/03/2017 03:07:18</publishTime>
+    </File>
+    <File Include="css/styleBayi.css">
+      <publishTime>04/03/2017 03:07:18</publishTime>
+    </File>
+    <File Include="FaturaDetay.aspx">
+      <publishTime>04/22/2017 09:40:23</publishTime>
+    </File>
+    <File Include="FaturaSorgula1.aspx">
+      <publishTime>04/22/2017 09:10:26</publishTime>
+    </File>
+    <File Include="font-awesome/style.sass">
+      <publishTime>04/10/2017 22:23:34</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/10/2017 22:05:22</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>04/10/2017 22:24:59</publishTime>
+    </File>
+    <File Include="sass/style.sass">
+      <publishTime>04/03/2017 03:07:18</publishTime>
+    </File>
+    <File Include="script/bootstrap.min.js">
+      <publishTime>04/03/2017 03:07:18</publishTime>
+    </File>
+    <File Include="script/Data.js">
+      <publishTime>04/03/2017 03:07:18</publishTime>
+    </File>
+    <File Include="script/jquery-1.12.0.min.js">
+      <publishTime>04/03/2017 03:07:18</publishTime>
+    </File>
+    <File Include="script/jquery.mobile-1.4.5.min.js">
+      <publishTime>04/03/2017 03:07:18</publishTime>
+    </File>
+    <File Include="script/shieldui-lite-all.min.js">
+      <publishTime>04/03/2017 03:07:18</publishTime>
+    </File>
+    <File Include="SiparisDetay.aspx">
+      <publishTime>04/22/2017 09:38:16</publishTime>
+    </File>
+    <File Include="SiparisEkle1.aspx">
+      <publishTime>04/22/2017 09:46:47</publishTime>
+    </File>
+    <File Include="SiparisSorgula1.aspx">
+      <publishTime>04/21/2017 21:39:33</publishTime>
+    </File>
+    <File Include="Toptanci.Master">
+      <publishTime>04/21/2017 21:34:15</publishTime>
+    </File>
+    <File Include="ToptanciAnaSayfa1.aspx">
+      <publishTime>04/21/2017 21:36:29</publishTime>
+    </File>
+    <File Include="UrunSorgula.aspx">
+      <publishTime>04/22/2017 09:13:55</publishTime>
+    </File>
+    <File Include="UrunSorgula1.aspx">
+      <publishTime>04/22/2017 09:12:56</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/22/2017 09:48:42</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
