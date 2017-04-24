@@ -13,7 +13,7 @@ namespace GuvenliYazilim_VersiyonKontrollu2.Models
             // TODO: Add constructor logic here
             //
         }
-        private void GirisKontrol()
+        private void GirisKontrolAna()
         {
             if (Session["User_Kod"] != null)
             {
@@ -23,7 +23,7 @@ namespace GuvenliYazilim_VersiyonKontrollu2.Models
         }
         protected override void InitializeCulture()//Language Choose Method
         {
-            GirisKontrol();
+            GirisKontrolAna();
 
         }
     }
